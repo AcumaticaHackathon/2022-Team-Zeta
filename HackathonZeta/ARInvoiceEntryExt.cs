@@ -16,6 +16,7 @@ namespace HackathonZeta
 
         public PXSelect<TZEmailAddFile, Where<TZEmailAddFile.noteID, Equal<Current<ARInvoice.noteID>>>> SelectAdditionalEmailAttachments;
         public PXSetup<PreferencesEmail> EmailPreferences;
+        public PXSelect<NoteDoc, Where<NoteDoc.noteID, Equal<Current<TZEmailAddFile.noteID>>>> AttachedFilesIDs;
         public static bool IsActive() => true;
 
         [PXLocalizable]
@@ -124,7 +125,7 @@ namespace HackathonZeta
         public delegate IEnumerable NotificationDelegate(PXAdapter adapter, [PXString] string notificationCD);
 
         [PXOverride]
-        public IEnumerable Notification(PXAdapter adapter, [PXString] string notificationCD, NotificationDelegate baseMethod)
+        public IEnumerable Notification(PXAdapter adapter, string notificationCD, NotificationDelegate baseMethod)
         {
             var additionalFileAttachments = getAdditionalFileIDs();
 
@@ -134,40 +135,48 @@ namespace HackathonZeta
             {
                 performSizeCheckOnAdditionalAttachments(additionalFileAttachments);
 
-                foreach (ARInvoice doc in adapter.Get().RowCast<ARInvoice>())
-                {
-                    Base.Document.Current = doc;
+                return HandleAdditionalAttachments(adapter, notificationCD, additionalFileAttachments);
 
-                    Dictionary<string, string> parameters = new Dictionary<string, string>
-                    {
-                        ["DocType"] = doc.DocType,
-                        ["RefNbr"] = doc.RefNbr
-                    };
-
-                    using (var ts = new PXTransactionScope())
-                    {
-                        if (ProjectDefaultAttribute.IsProject(Base, doc.ProjectID) && Base.Activity.IsProjectSourceActive(doc.ProjectID, notificationCD))
-                        {
-                            //No isMassProcess parameter on overload
-                            Base.Activity.SendNotification(PMNotificationSource.Project, notificationCD, doc.BranchID, parameters, additionalFileAttachments);
-                        }
-                        else
-                        {
-                            Base.Activity.SendNotification(ARNotificationSource.Customer, notificationCD, doc.BranchID, parameters, additionalFileAttachments);
-                        }
-                        Base.Save.Press();
-
-                        ts.Complete();
-                    }
-
-                    yield return doc;
-                }
             }
             else
             {
-                yield return baseMethod(adapter, notificationCD);
+                return baseMethod(adapter, notificationCD);
             }
         }
+        
+        private IEnumerable HandleAdditionalAttachments(PXAdapter adapter, string notificationCD, List<Guid?> additionalFileAttachments)
+        {
 
+            foreach (ARInvoice doc in adapter.Get().RowCast<ARInvoice>())
+            {
+                Base.Document.Current = doc;
+
+                Dictionary<string, string> parameters = new Dictionary<string, string>
+                {
+                    ["DocType"] = doc.DocType,
+                    ["RefNbr"] = doc.RefNbr
+                };
+
+                using (var ts = new PXTransactionScope())
+                {
+                    if (ProjectDefaultAttribute.IsProject(Base, doc.ProjectID) && Base.Activity.IsProjectSourceActive(doc.ProjectID, notificationCD))
+                    {
+                        //No isMassProcess parameter on overload
+                        Base.Activity.SendNotification(PMNotificationSource.Project, notificationCD, doc.BranchID, parameters, additionalFileAttachments);
+                    }
+                    else
+                    {
+                        Base.Activity.SendNotification(ARNotificationSource.Customer, notificationCD, doc.BranchID, parameters, additionalFileAttachments);
+                    }
+                    Base.Save.Press();
+
+                    ts.Complete();
+                }
+
+                yield return doc;
+            }
+        }
     }
+
+
 }
