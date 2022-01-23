@@ -5,9 +5,9 @@
                 <PXSmartPanel TypeFullName="PX.Web.UI.PXSmartPanel">
                     <Prop Key="Virtual:ApplyStylesheetSkin" />
                     <Prop Key="ID" Value="AdditionalFilesDialog" />
-                    <Prop Key="Key" Value="SelectableFiles" />
+                    <Prop Key="Key" Value="SelectAdditionalEmailAttachments" />
                     <Prop Key="LoadOnDemand" Value="True" />
-                    <Prop Key="Caption" Value="Additional Files" />
+                    <Prop Key="Caption" Value="Additional Email Attachments" />
                     <Prop Key="CaptionVisible" Value="True" />
                     <Children Key="Controls">
                         <AddItem>
@@ -17,7 +17,7 @@
                                 <Children Key="Levels">
                                     <AddItem>
                                         <PXGridLevel TypeFullName="PX.Web.UI.PXGridLevel">
-                                            <Prop Key="DataMember" Value="SelectableFiles" />
+                                            <Prop Key="DataMember" Value="SelectAdditionalEmailAttachments" />
                                             <Children Key="Columns">
                                                 <AddItem>
                                                     <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">

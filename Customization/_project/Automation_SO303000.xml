@@ -109,7 +109,7 @@
             <StateActionFields />
             <StateActionParams />
         </Action>
-        <Action IsActive="True" ActionName="ShowAdditionalFiles" ActionType="G" DisplayName="Show Additional Files" MenuFolderType="Action" WindowMode="S" IsLockedOnToolbar="False" Connotation="None">
+        <Action IsActive="True" ActionName="ShowAdditionalEmailAttachments" ActionType="G" DisplayName="Show Email Attachments" MenuFolderType="Action" WindowMode="S" IsLockedOnToolbar="False" Connotation="None">
             <StateActionFields />
             <StateActionParams />
         </Action>
