@@ -1,0 +1,30 @@
+﻿<Page path="~/pages/sm/sm204001.aspx" ControlId="5" pageSource="zVhbb9pIFH6mUv+D5VUfN5C0qVYRrJZwSdFCgjBp8lZN7AOMas+44zGXPuxv33PGNgw3h6ZRd/uQ2uNzv35D/d1fzpBNwekzMU3xoeG2fnOdAUs0KPrQ5SGe/VPdnCTVrlRRGzTj4Vlkjl2nmWrZmYPQD1xBGjdcrVJw376pfGYhD5iGEXxLIdENd8LCBFynJYNctje4qH2o1c7PWBIvz/zEdXpiBorrpOGSvi8FAYkbc00890LTQ2Bsd513f7598/ZNHX3JzByvYnA+c6VTFg6Znp3gAImoowVXLSk0+uH02g3Xx+dzstUcDUPmwycZBqDoYzxre66jUsHQKw/UHMWgkEo9XrKr9kqwiPttppknU+WDkRcka4YkY0ArE/5ELo0pYM4DD8jc81rtnesMFY+YWn3msMBQKJgkFIIKeXfLIuQZPp55gzP6AgqED0knQp8GjAttTKnUWywMn5j/tSWjiIkgMadk4tXwse3tfHXof65bM6wFSAqTMlUem+Nz9cX8HbQqbPq+TIX+cgsLy/NuVhGvJJuitS+8DTGI4E7cKB403Cn+NUyvprUNIWj4Yb316qEE1asHS4gqtGqV6LGKvThesd0jBYu+U09Q7IyYCb7slerGkqKWPb0iX7//zkUAyysHyxZ1s1hzKRruDQhQLHQ80JqLaVa8WwVOEgcQPYEq6juLyhiiOMShYeemz1Yy1aM0hF27PM2UbskwjUSRoT57gjDJdT0OsoAoGXr8O9o72Em7h8nztVTGdQjaMGFpqO38HoxFl0OIST1A3msbXysVnHA4Xa5XzTA01OsSavMEPVwNcAriESx1ZpJj/ctso2+dgOvcNtPgYzalaPFlmVm7lD8k3ksnJ4ovKLOAbgS3lYzbciFywU3lz/gcDFdyRwU5xp4qU3CM47AftylVkeXJCBuP6TvRUUoqD3sQK7BM3WH6w8paM/C/XsulURU+hV6aUJcbU4dK4hxOntF2jOOwPqv0SaN9cL6n5aXdsK92qy02r/sqLcfu8ewBQl9GcCs1n3Cf0TDoBa/WEEes+lBm1ZAlyUKqIJvjwa+17KLMsr6ccjECX+KH1a+16/0pEftvTLssM228kF1GVIgi2jDn/i+utI8nGUf49vp1wmaP1a15vXkt7UnbCI9ruFcW/rBXLeEOCwmcijfeH8cbN8fxBiEiI8ICRS8DHDakIKc+AZ/OUMz5ZS3GzeR95YL4e+JbipcTC6CY8evkOxuldwECwmJZAjAbDKEcZilHJX2Y4xi1gQP5YE63kIyNBHJEQ0jcjOSc3RaQfdhGFImvuDFy7d37mnGmz0UBFQ/i3uop8ntJ09ec8DxdJfDGl+8zfMd6aoZ8isFpYT4pCSdJbAaBwh22tvYiC/1JvGYEEqTeZPKP07nvUo3LBpfnJ5noF0vpidOEIF7fSmN9JBfbYPXn4erufn4c7Dmxg9q26qUMqFpk5RLX+SzBZwVJuSQru89swYxoE+m90Objad10+QSz2rJOdS3FNVNOjsqzg4ZruiMXk52tU0g3W6cjqNeD3ctopU6u0BJUwXEaHLDgzeSiRMoylkp3lj6OiqNE9NvELUavnALx/LycostV8oyQPjtOUa9uBajeShMto56GaB2yLNFShhjp61RrKczkoD7C7OLa6kWo5G9YmTIxt/18t+UD3Hx314VDvx7RRfgah69zeLwZIWOmpqCzVbApu6GM09i+sBvuEUywPmcbpv1Lf1FRW54862Nx1d/4OIJIzuHnfSwk/y/czPaJ8c9qntMcyXhfz42Ks1a+bvAbJdO4RzCg4SIIuFMB7d6a+7zTOMR3SrooeSS0Vr3JY9EFOI0IFzkFuLj4eEmLIZ/ZHz/QmijE57T2fLJk1QleOAgr5CJrjnUDmrOsCLbP7mP6CXX7DJVkiHSnf01+aHNs+jtbMrRUGBcUpQeETxIzNOBiDZYISVUtFEhj9gAC/Bc=">
+    <PXFormView ID="form" ParentId="phF_form" TypeFullName="PX.Web.UI.PXFormView">
+        <Children Key="Template">
+            <AddItem>
+                <PXLayoutRule TypeFullName="PX.Web.UI.PXLayoutRule">
+                    <Prop Key="Virtual:ApplyStylesheetSkin" />
+                    <Prop Key="ID" Value="CstPXLayoutRule3" />
+                    <Prop Key="Merge" Value="True" />
+                </PXLayoutRule>
+            </AddItem>
+            <AddItem>
+                <PXNumberEdit TypeFullName="PX.Web.UI.PXNumberEdit">
+                    <Prop Key="Virtual:ApplyStylesheetSkin" />
+                    <Prop Key="ID" Value="CstPXNumberEdit1" />
+                    <Prop Key="DataField" Value="UsrCombinedAttachmentSizeLimit" />
+                </PXNumberEdit>
+            </AddItem>
+            <AddItem>
+                <PXLabel TypeFullName="PX.Web.UI.PXLabel">
+                    <Prop Key="Virtual:ApplyStylesheetSkin" />
+                    <Prop Key="ID" Value="CstLabel5" />
+                    <Prop Key="Text" Value="KB" />
+                </PXLabel>
+            </AddItem>
+        </Children>
+    </PXFormView>
+    <Content ID="cont2" ParentId="phF" TypeFullName="System.Web.UI.WebControls.Content">
+        <Children Key="Controls" />
+    </Content>
+</Page>

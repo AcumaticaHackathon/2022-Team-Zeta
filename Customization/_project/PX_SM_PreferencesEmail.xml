@@ -1,0 +1,6 @@
+﻿<DAC type="PX.SM.PreferencesEmail">
+    <Field FieldName="UsrCombinedAttachmentSizeLimit" TypeName="int" MapDbTable="PreferencesEmail" TextAttributes="#CDATA" StorageName="AddColumn">
+        <CDATA name="TextAttributes"><![CDATA[[PXDBInt(MaxValue = 1073741824, MinValue = 1)]
+[PXUIField(DisplayName="Combined Attachment Size Limit")]]]></CDATA>
+    </Field>
+</DAC>
