@@ -56,7 +56,7 @@
                                         </PXButton>
                                     </AddItem>
                                 </Children>
-                                <Prop Key="SkinID" Value="&quot;Buttons" />
+                                <Prop Key="SkinID" Value="Buttons" />
                                 <Prop Key="Width" Value="450px" />
                             </PXPanel>
                         </AddItem>
