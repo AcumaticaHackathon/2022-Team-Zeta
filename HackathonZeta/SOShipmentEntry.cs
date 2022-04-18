@@ -43,8 +43,10 @@ namespace  CS3HackathonZeta
 {
   public class SOShipmentEntry_Extension : PXGraphExtension<SOShipmentEntry>
   {
+  [PXCopyPasteHiddenView]
     public PXSelect<TZEmailAddFile, Where<TZEmailAddFile.noteID, Equal<Current<SOShipment.noteID>>>> SelectAdditionalEmailAttachments;
     public PXSetup<PreferencesEmail> EmailPreferences;
+    [PXCopyPasteHiddenView]
     public PXSelect<NoteDoc, Where<NoteDoc.noteID, Equal<Current<TZEmailAddFile.noteID>>>> AttachedFilesIDs;
     public PXAction<SOShipment> ShowAdditionalEmailAttachments;
 
