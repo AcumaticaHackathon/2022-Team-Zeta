@@ -13,9 +13,10 @@ namespace HackathonZeta
 {
     public class ARInvoiceEntryExt : PXGraphExtension<ARInvoiceEntry>
     {
-
+        [PXCopyPasteHiddenView]
         public PXSelect<TZEmailAddFile, Where<TZEmailAddFile.noteID, Equal<Current<ARInvoice.noteID>>>> SelectAdditionalEmailAttachments;
         public PXSetup<PreferencesEmail> EmailPreferences;
+        [PXCopyPasteHiddenView]
         public PXSelect<NoteDoc, Where<NoteDoc.noteID, Equal<Current<TZEmailAddFile.noteID>>>> AttachedFilesIDs;
         public static bool IsActive() => true;
 
